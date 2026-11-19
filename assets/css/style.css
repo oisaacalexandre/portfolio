@@ -392,6 +392,7 @@ body.home { background: var(--blue); color: var(--on-blue); }
 .zoom img { width: 100%; }
 .project .zoom, .project .yt, .project .carousel-track { border-radius: 0; }
 .project .zoom { background: transparent; }
+.gif-frame img { width: 100%; height: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
 .fill { height: 100%; }
 .fill .zoom, .fill .zoom img { height: 100%; object-fit: cover; }
 
@@ -630,6 +631,7 @@ body.sobre { background: var(--blue); color: var(--on-blue); }
   .intro-meta li:nth-child(2) { text-align: right; }
   .intro-meta li:nth-child(3) { grid-column: 1 / -1; text-align: left; }
   .grid { grid-template-columns: 1fr; gap: 18px; }
+  .card-media .anim { display: none; }   /* no celular as capas ficam estáticas (e o GIF nem é baixado) */
 
   .p-text p { text-align: left; }
   .credits { grid-template-columns: 1fr; }
