@@ -177,7 +177,8 @@
        recomeça a contagem após interação manual e volta da última para a primeira */
     var every = parseInt(c.getAttribute("data-autoplay"), 10);
     var timer = null, hold = false;
-    function tick() { if (!hold && !document.hidden) go(current() + 1); }
+    var narrow = window.matchMedia ? window.matchMedia("(max-width: 760px)") : { matches: false };   // no celular, só manual
+    function tick() { if (!hold && !document.hidden && !narrow.matches) go(current() + 1); }
     function restart() {
       if (!every) return;
       clearInterval(timer);
